@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>	
+	<script src="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"></script>
+	<link rel="stylesheet" href="./main.css">
+	<script src="./main.js"></script>
+</head>
+
+<body onload="InitThis();" >
+	<div id = "wrap"> 
+		<center>
+			<video id = "MyVideo" width="80%" height="100%" controls autoplay>
+				<source src="./Amalfi.mp4" type="video/mp4">
+			</video>
+			<div id = "canvasDIV">
+				<button onclick="clearArea();return false;">Clear Area</button>
+				Line width : <select id="selWidth">
+					<option value="1">1</option>
+					<option value="3">3</option>
+					<option value="5" selected="selected">5</option>
+					<option value="7">7</option>
+					<option value="9">9</option>
+					<option value="11">11</option>
+				</select>
+				Color : <select id="selColor">
+					<option value="black">black</option>
+					<option value="blue">blue</option>
+					<option value="red">red</option>
+					<option value="green">green</option>
+					<option value="yellow">yellow</option>
+					<option value="gray">gray</option>
+					<option value="white"  selected="selected">white</option>
+				</select>
+				<button onclick="cUndo();return false;">Undo</button>
+				<button onclick="cRedo();return false;">Redo</button>
+				<button onclick="input_text();">TEXT</button>
+				<br/><br >
+				<canvas id="myCanvas"></canvas>
+			</div>
+		</center>
+		
+		<div id = "text" >
+			<textarea id = "memo" ></textarea>
+		</div>
+	</div>
+</body>
+</html>
